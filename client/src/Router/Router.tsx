@@ -6,6 +6,7 @@ import {useMemo} from "react";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import {Dashboard} from "../pages/Dashboard";
 import Layout from "../pages/Layout";
+import {Products} from "../pages/Products";
 
 interface GlobalState {
     global: {
@@ -25,6 +26,7 @@ function Router() {
                         <Route element={<Layout/>}>
                             <Route path='/' element={<Navigate to='/dashboard' replace/>}/>
                             <Route path='/dashboard' element={<Dashboard/>}/>
+                            <Route path='/products' element={<Products/>}/>
                         </Route>
                     </Routes>
                 </ThemeProvider>
