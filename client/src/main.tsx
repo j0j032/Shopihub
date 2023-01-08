@@ -1,26 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
-import {configureStore} from "@reduxjs/toolkit";
-import globalReducer from "./state";
+import Router from './Router/Router'
+import './styles/index.css'
+import store from './store'
 import {Provider} from "react-redux";
-import {setupListeners} from "@reduxjs/toolkit/query";
-import {api} from './state/api'
+import {QueryClientProvider, QueryClient} from 'react-query'
+import {ReactQueryDevtools} from 'react-query/devtools'
 
-const store = configureStore({
-    reducer: {
-        global: globalReducer,
-        [api.reducerPath]: api.reducer,
-    },
-    middleware: (getDefault) => getDefault().concat(api.middleware)
-});
-setupListeners(store.dispatch)
+const queryClient = new QueryClient()
+
+export type RootState = ReturnType<typeof store.getState>
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <Provider store={store}>
-            <App/>
+            <QueryClientProvider client={queryClient}>
+                <Router/>
+                <ReactQueryDevtools initialIsOpen={false}/>
+            </QueryClientProvider>
         </Provider>
     </React.StrictMode>,
 )
