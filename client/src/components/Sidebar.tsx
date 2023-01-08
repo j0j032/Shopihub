@@ -18,7 +18,7 @@ import FlexBetween from "./FlexBetween";
 import profilePic from '../assets/profile.jpg'
 import {navItems} from "../config/navItems";
 import User from "../types/User";
-import {PaletteColorKey} from "../types/Palette";
+import {PaletteColorKey} from "../../mui";
 
 type SidebarProps = {
     isNonMobile: boolean,

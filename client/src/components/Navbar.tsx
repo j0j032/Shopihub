@@ -24,7 +24,7 @@ import {
     useTheme
 } from "@mui/material";
 import User from "../types/User";
-import {PaletteColorKey} from "../types/Palette";
+import {PaletteColorKey} from "../../mui";
 
 type NavbarProps = {
     isSidebarOpen: boolean,
