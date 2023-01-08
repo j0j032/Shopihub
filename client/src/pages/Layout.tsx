@@ -8,8 +8,8 @@ import {RootState} from "main";
 import {useGetUser} from "../api/user";
 
 function Layout() {
-    const isNonMobile = useMediaQuery("(min-width: 600px)");
-    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+    const isNonMobile = useMediaQuery("(min-width: 800px)");
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(isNonMobile);
     const userId = useSelector((state: RootState) => state.global.userId);
     const {data, isLoading} = useGetUser(userId)
 
@@ -20,7 +20,8 @@ function Layout() {
                     <Sidebar isNonMobile={isNonMobile} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}
                              drawerWidth='250px' user={data}/>
                     <Box flexGrow='1'>
-                        <Navbar user={data} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>
+                        <Navbar isNonMobile={isNonMobile} user={data} isSidebarOpen={isSidebarOpen}
+                                setIsSidebarOpen={setIsSidebarOpen}/>
                         <Outlet/>
                     </Box>
                 </>
