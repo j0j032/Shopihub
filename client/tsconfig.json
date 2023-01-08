@@ -27,7 +27,8 @@
     "baseUrl": "src"
   },
   "include": [
-    "src"
+    "src",
+    "mui.d.ts"
   ],
   "references": [
     {
