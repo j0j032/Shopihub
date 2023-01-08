@@ -1,11 +1,11 @@
 import {CssBaseline, PaletteMode, ThemeProvider} from "@mui/material";
 import {createTheme} from "@mui/material/styles";
-import {themeSettings} from "./theme";
+import {themeSettings} from "../config/theme";
 import {useSelector} from "react-redux";
 import {useMemo} from "react";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import {Dashboard} from "./scenes/Dashboard";
-import {Layout} from "./scenes/Layout";
+import {Dashboard} from "../pages/Dashboard";
+import Layout from "../pages/Layout";
 
 interface GlobalState {
     global: {
@@ -13,7 +13,7 @@ interface GlobalState {
     }
 }
 
-function App() {
+function Router() {
     const mode = useSelector((state: GlobalState) => state.global.mode)
     const theme = useMemo(() => createTheme(themeSettings(mode as PaletteMode)), [mode])
     return (
@@ -33,4 +33,4 @@ function App() {
     )
 }
 
-export default App
+export default Router
