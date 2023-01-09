@@ -1,6 +1,6 @@
 import axios from "axios";
 import {useQuery} from "react-query";
-import User from "../types/User";
+import User from "../../types/User";
 
 const BASE_URL: string = import.meta.env.VITE_REACT_APP_BASE_URL
 

@@ -3,7 +3,7 @@ import {GridCellParams} from '@mui/x-data-grid';
 import {Header} from "../components/Header";
 import {DataGrid} from "@mui/x-data-grid";
 import {PaletteColorKey} from "../../mui";
-import {useGetCustomers} from "../api/customers";
+import {useGetCustomers} from "../api/Client/customers";
 
 export function Customers() {
     const theme = useTheme();
