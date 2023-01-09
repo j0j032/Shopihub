@@ -1,6 +1,6 @@
 import {Box, useMediaQuery,} from "@mui/material";
 import {Header} from "../components/Header";
-import {useGetProducts} from "../api/products";
+import {useGetProducts} from "../api/Client/products";
 import {Product} from "../components/Product";
 
 export function Products() {

@@ -1,5 +1,5 @@
 import {Box, useTheme} from "@mui/material";
-import {useGetGeography} from "../api/geography";
+import {useGetGeography} from "../api/Client/geography";
 import {Header} from "../components/Header";
 import {ResponsiveChoropleth} from "@nivo/geo";
 import {PaletteColorKey} from "../../mui";

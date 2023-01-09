@@ -1,5 +1,5 @@
 import {Box, useTheme} from "@mui/material";
-import {useGetTransactions} from "../api/transactions";
+import {useGetTransactions} from "../api/Client/transactions";
 import {useState} from "react";
 import {Header} from "../components/Header";
 import {PaletteColorKey} from "../../mui";

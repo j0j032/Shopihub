@@ -1,6 +1,6 @@
 import axios from "axios";
 import {useQuery} from "react-query";
-import {Transactions} from "../types/Transaction";
+import {Transactions} from "../../types/Transaction";
 
 const BASE_URL: string = import.meta.env.VITE_REACT_APP_BASE_URL
 type Sort = { field: string, sort: string } | {}
