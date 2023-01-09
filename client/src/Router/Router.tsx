@@ -9,6 +9,7 @@ import Layout from "../pages/Layout";
 import {Products} from "../pages/Products";
 import {Customers} from "../pages/Customers";
 import {Transactions} from "../pages/Transactions";
+import {Geography} from "../pages/Geography";
 
 interface GlobalState {
     global: {
@@ -31,6 +32,7 @@ function Router() {
                             <Route path='/products' element={<Products/>}/>
                             <Route path='/customers' element={<Customers/>}/>
                             <Route path='/transactions' element={<Transactions/>}/>
+                            <Route path='/geography' element={<Geography/>}/>
                         </Route>
                     </Routes>
                 </ThemeProvider>
