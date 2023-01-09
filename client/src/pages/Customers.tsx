@@ -5,9 +5,7 @@ import {DataGrid} from "@mui/x-data-grid";
 import {PaletteColorKey} from "../../mui";
 import {useGetCustomers} from "../api/customers";
 
-type CustomersProps = {}
-
-export function Customers({}: CustomersProps) {
+export function Customers() {
     const theme = useTheme();
     const {data, isLoading} = useGetCustomers()
 
