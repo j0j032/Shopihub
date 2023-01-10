@@ -1,26 +1,26 @@
 type Data = {
-    totalSales?: number,
-    totalUnits?: number,
+    totalSales: number,
+    totalUnits: number,
     _id: string
 }
 
 interface DailyDatas extends Data {
-    month: string
+    date: string
 }
 
 interface MonthlyDatas extends Data {
-    date: string
+    month: string
 }
 
 type ProductStat = {
     dailyData: DailyDatas[],
     monthlyData: MonthlyDatas[]
-    createdAt?: string,
-    updatedAt?: string,
-    productId?: string,
-    yearlySalesTotal?: number,
-    yearlyTotalSoldUnits?: number,
-    __v?: number,
+    createdAt: string,
+    updatedAt: string,
+    productId: string,
+    yearlySalesTotal: number,
+    yearlyTotalSoldUnits: number,
+    __v: number,
     _id: number
 }
 
