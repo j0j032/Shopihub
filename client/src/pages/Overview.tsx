@@ -1,11 +1,9 @@
 import {useState} from "react";
-import {Box, FormControl, InputLabel, MenuItem, Select, useTheme} from "@mui/material"
+import {Box, FormControl, InputLabel, MenuItem, Select} from "@mui/material"
 import {Header} from "../components/Header";
 import {OverviewChart} from "../components/OverviewChart";
 
-type OverviewProps = {}
-
-export function Overview({}: OverviewProps) {
+export function Overview() {
     const [view, setView] = useState("units");
 
     return (

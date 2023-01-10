@@ -3,7 +3,7 @@ import {useTheme} from "@mui/material";
 import {useMemo} from "react";
 import {PaletteColorKey} from "../../mui";
 import {TotalLine} from "../types/Sales";
-import {ResponsiveLine} from "@nivo/line";
+import {ResponsiveLine} from "@nivo/line"
 
 type OverviewChartProps = {
     view: string,
