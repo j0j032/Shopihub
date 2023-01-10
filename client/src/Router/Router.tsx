@@ -15,6 +15,7 @@ import {Daily} from "../pages/Daily";
 import {Monthly} from "../pages/Monthly";
 import {Breakdown} from "../pages/Breakdown";
 import {Admin} from "../pages/Admin";
+import {Performance} from "../pages/Performance";
 
 interface GlobalState {
     global: {
@@ -43,6 +44,7 @@ function Router() {
                             <Route path='/monthly' element={<Monthly/>}/>
                             <Route path='/breakdown' element={<Breakdown/>}/>
                             <Route path='/admin' element={<Admin/>}/>
+                            <Route path='/performance' element={<Performance/>}/>
                         </Route>
                     </Routes>
                 </ThemeProvider>
