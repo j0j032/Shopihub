@@ -3,7 +3,7 @@ import {useTheme} from "@mui/material";
 import {useMemo} from "react";
 import {PaletteColorKey} from "../../mui";
 import {TotalLine} from "../types/Sales";
-import {ResponsiveLine} from "@nivo/line";
+import {ResponsiveLine} from "@nivo/line"
 
 type OverviewChartProps = {
     view: string,
@@ -47,7 +47,7 @@ export function OverviewChart({view, isDashboard = false}: OverviewChartProps) {
             },
             {sales: 0, units: 0}
         );
-
+        console.log([totalSalesLine])
         return [[totalSalesLine], [totalUnitsLine]];
     }, [data]);
 
