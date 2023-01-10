@@ -1,3 +1,5 @@
+import {Transaction} from "./Transaction";
+
 type Role = 'user' | 'admin' | 'superadmin'
 
 interface User {
@@ -18,3 +20,8 @@ interface User {
 }
 
 export default User
+
+export interface UserWithStats {
+    user: User
+    sales: Transaction[]
+}
