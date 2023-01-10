@@ -47,7 +47,7 @@ export function OverviewChart({view, isDashboard = false}: OverviewChartProps) {
             },
             {sales: 0, units: 0}
         );
-        console.log([totalSalesLine])
+
         return [[totalSalesLine], [totalUnitsLine]];
     }, [data]);
 
